@@ -1,0 +1,20 @@
+祝贺！ ShadowsocksR 已经配置成功!
+服务器 IP:  155.138.213.121 
+服务器 端口:  3038 
+连接密码:  Qazwsx7410? 
+加密:  aes-256-cfb 
+协议:  auth_sha1_v4 
+混淆:  http_simple 
+
+
+请下载和你系统版本对应的SSR客户端使用该服务 
+SSR所有客户端下载地址：
+ https://www.qcgzxw.cn/301.html 
+
+Vultr实战搭建ssr+锐速教程（内附视频教程）：
+ https://www.qcgzxw.cn/1640.html 
+
+小文's blog地址： www.qcgzxw.cn 
+
+[root@vultr ~]# ^C
+[root@vultr ~]# 
