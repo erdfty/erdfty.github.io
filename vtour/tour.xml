@@ -1,0 +1,497 @@
+﻿<krpano version="1.19" title="西湖之旅">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="player/qq-player.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="true"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key="AIzaSyBDufSu-GHQaT7uesZMZv2hJ9mqcPs9x84"
+	               maps_zoombuttons="true"
+	               gyro="true"
+	               webvr="true"
+	               webvr_gyro_keeplookingdirection="false"
+	               webvr_prev_next_hotspots="true"
+	               littleplanetintro="true"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext="loading..."
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+		set(layer[skin_title_pr].html,get(title));
+	</action>
+
+	//苏堤春晓
+	<scene name="苏堤春晓全景图" title="苏堤春晓" onstart="goldenstars();" thumburl="panos/sudichunxiao.tiles/thumb.jpg" lat="30.2437492" lng="120.1379511" heading="0.0">
+
+		<view hlookat="361.778" vlookat="19.026" fovtype="MFOV" fov="123.043" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/sudichunxiao.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/sudichunxiao.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/sudichunxiao.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<include url="snow/snow.xml"/>
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="151.418" atv="7.204" linkedscene="平湖秋月全景图" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-103.238" atv="0.527" linkedscene="太子湾全景图" />
+		<hotspot name="videospot"
+ 			url="img/sudichunxiao.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="67.913" atv="4.053"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('s05059prood',qq);"/>
+	</scene>
+
+	//平湖秋月
+	<scene name="平湖秋月全景图" title="平湖秋月" onstart="" thumburl="panos/pinghuqiuyue.tiles/thumb.jpg" lat="30.2521633" lng="120.146047" heading="0.0">
+
+		<view hlookat="-43.271" vlookat="14.712" fovtype="MFOV" fov="133.921" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/pinghuqiuyue.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/pinghuqiuyue.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/pinghuqiuyue.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-147.015" atv="7.723" linkedscene="断桥残雪全景图" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="33.146" atv="5.639" linkedscene="苏堤春晓全景图" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="102.462" atv="2.058" linkedscene="曲院风荷全景图" />
+		<hotspot name="videospot"
+ 			url="img/pinghuqiuyue.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="-25.544" atv="22.542"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('o0168sppfob',qq);"/>
+	</scene>
+
+	//断桥残雪
+	<scene name="断桥残雪全景图" title="断桥残雪" onstart="" thumburl="panos/duanqiaocanxue.tiles/thumb.jpg" lat="30.2592665" lng="120.1518425" heading="0.0">
+
+		<view hlookat="-37.191" vlookat="18.130" fovtype="MFOV" fov="137.726" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/duanqiaocanxue.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/duanqiaocanxue.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/duanqiaocanxue.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-65.895" atv="9.334" linkedscene="平湖秋月全景图" />
+		<hotspot name="videospot"
+ 			url="img/duanqiaocanxue.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="2.386" atv="21.769"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('o0505fkuz5m',qq);"/>
+	</scene>
+
+	//曲院风荷
+	<scene name="曲院风荷全景图" title="曲院风荷" onstart="snows();" thumburl="panos/quyuanfenghe.tiles/thumb.jpg" lat="30.2486057" lng="120.1309561" heading="0.0">
+
+		<view hlookat="-6.651" vlookat="9.272" fovtype="MFOV" fov="132.103" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/quyuanfenghe.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/quyuanfenghe.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/quyuanfenghe.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<include url="snow/snow.xml"/>
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="98.101" atv="6.245" linkedscene="双峰插云全景图" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-80.145" atv="3.730" linkedscene="苏堤春晓全景图" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="-120.647" atv="4.454" linkedscene="平湖秋月全景图" />
+		<hotspot name="spot9" style="skin_hotspotstyle" ath="24.217" atv="9.467" linkedscene="太子湾全景图" />
+		<hotspot name="videospot"
+ 			url="img/duanqiaocanxue.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="24.217" atv="9.467"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('m0505ejpo7j',qq);"/>
+	</scene>
+
+	//雷峰夕照
+	<scene name="雷峰夕照全景图" title="雷峰夕照" onstart="" thumburl="panos/leifengxizhao.tiles/thumb.jpg" lat="30.2303297" lng="120.1488459" heading="0.0">
+
+			<view hlookat="-372.221" vlookat="1.917" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+			<preview url="panos/leifengxizhao.tiles/preview.jpg" />
+
+			<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+				<level tiledimagewidth="1280" tiledimageheight="1280">
+					<cube url="panos/leifengxizhao.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				</level>
+				<level tiledimagewidth="640" tiledimageheight="640">
+					<cube url="panos/leifengxizhao.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				</level>
+			</image>
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="177.648" atv="8.788" linkedscene="南屏晚钟全景图" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-143.552" atv="9.974" linkedscene="太子湾全景图" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="-107.450" atv="4.961" linkedscene="花港观鱼全景图" />
+		<hotspot name="videospot"
+ 			url="img/leifengxizhao.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="-1.579" atv="4.977"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('v0508legb7b',qq);"/>
+
+	</scene>
+
+	//南屏晚钟
+	<scene name="南屏晚钟全景图" title="南屏晚钟" onstart="" thumburl="panos/nanpingwanzhong.tiles/thumb.jpg" lat="30.2293936" lng="120.148851" heading="0.0">
+
+		<view hlookat="53.239" vlookat="13.007" fovtype="MFOV" fov="129.545" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/nanpingwanzhong.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/nanpingwanzhong.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/nanpingwanzhong.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="75.566" atv="7.976" linkedscene="太子湾全景图" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="103.922" atv="6.078" linkedscene="花港观鱼全景图" />
+		<hotspot name="videospot"
+ 			url="img/nanpingwanzhong.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="45.481" atv="8.587"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('s05054izso3',qq);"/>
+	</scene>
+
+	//太子湾
+	<scene name="太子湾全景图" title="太子湾" onstart="" thumburl="panos/taiziwan.tiles/thumb.jpg" lat="30.2272472" lng="120.1434732" heading="0.0">
+
+		<view hlookat="-42.416" vlookat="14.114" fovtype="MFOV" fov="130.173" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/taiziwan.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/taiziwan.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/taiziwan.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-129.349" atv="4.880" linkedscene="雷峰夕照全景图" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-100.177" atv="6.341" linkedscene="南屏晚钟全景图" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="141.967" atv="0.368" linkedscene="花港观鱼全景图" />
+		<hotspot name="videospot"
+ 			url="img/taiziwan.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="-59.769" atv="2.017"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('t038995br1g',qq);"/>
+	</scene>
+
+	//花港观鱼
+	<scene name="花港观鱼全景图" title="花港观鱼" onstart="" thumburl="panos/huagangguanyu.tiles/thumb.jpg" lat="30.2299021" lng="120.1374759" heading="0.0">
+
+		<view hlookat="42.967" vlookat="9.257" fovtype="MFOV" fov="136.329" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/huagangguanyu.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/huagangguanyu.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/huagangguanyu.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="40.101" atv="5.134" linkedscene="雷峰夕照全景图" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-59.765" atv="1.317" linkedscene="苏堤春晓全景图" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="102.072" atv="-1.583" linkedscene="太子湾全景图" />
+		<hotspot name="videospot"
+ 			url="img/huagangguanyu.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="-8.657" atv="6.658"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('b0508dl0m1a',qq);"/>
+
+	</scene>
+
+	//柳浪闻莺
+	<scene name="柳浪闻莺全景图" title="柳浪闻莺" onstart="" thumburl="panos/liulangwenying.tiles/thumb.jpg" lat="30.2394403" lng="120.1577132" heading="0.0">
+
+		<view hlookat="24.961" vlookat="2.535" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/liulangwenying.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/liulangwenying.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/liulangwenying.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-143.482" atv="15.659" linkedscene="雷峰夕照全景图" />
+		<hotspot name="videospot"
+ 			url="img/liulangwenying.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="31.349" atv="16.852"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('p03249mqnab',qq);"/>
+	</scene>
+
+	//双峰插云
+	<scene name="双峰插云全景图" title="双峰插云" onstart="" thumburl="panos/shuangfengchayun.tiles/thumb.jpg" lat="30.2481127" lng="120.121519" heading="0.0">
+
+		<view hlookat="32.000" vlookat="0.008" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/shuangfengchayun.tiles/preview.jpg" />
+
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="512">
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/shuangfengchayun.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/shuangfengchayun.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+		</image>
+
+
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="116.437" atv="1.239" linkedscene="曲院风荷全景图" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="143.093" atv="3.143" linkedscene="苏堤春晓全景图" />
+		<hotspot name="videospot"
+ 			url="img/shuangfengchayun.png"
+ 			scale="0.5"
+ 			zoom="true"
+ 			ath="21.237" atv="8.534"
+ 			onclick="looktohotspot(get(name),90);qqplayer_open('y0168bohrax',qq);"/>
+	</scene>
+
+	//2018-4-8	指南针
+		<!-- 表盘不动 表针动 -->
+	<layer name="compass1" url="compass/compass_bg.png" keep="true" align="lefttop" x="10" y="10" children="false" scalechildren="true" destscale="1.0" onclick="switch(destscale,1.0,0.5);tween(scale,get(destscale));">
+		<layer name="compass1_plate"   url="compass/compass_plate.png" keep="true"    align="center"  zorder="1" />
+		<layer name="compass1_pointer" url="compass/compass_pointer.png" keep="true"  align="center"  zorder="2" />
+		<layer name="compass1_ring"    url="compass/compass_ring.png"  keep="true"   align="lefttop" zorder="3" />
+	</layer>
+
+
+	<!-- 视野改变事件 -->
+	<events name="compass_events" keep="true" onviewchange="compass_update_rotate();" />
+
+	<!-- 更新指南针旋转数值 -->
+	<action name="compass_update_rotate">
+	        set(global_heading, 180);
+		calc(plugin[compass1_pointer].rotate, view.hlookat - global_heading);
+	</action>
+
+	//
+	//2018-4-8  进度条展示
+	<include url="loading/loadinganimation.xml" />
+	<include url="loading/loadingpercenttext.xml" />
+	<include url="loading/loadingbar.xml" />
+	//
+
+	//2018-4-8 自动旋转和切换场景
+	<autorotate enabled="true"
+		waittime="0.5"
+		speed="0.5"
+		horizon="0.0"
+	/>
+
+<events name="onautorotateevents" keep="true" onautorotateoneround="nextscene()"/>
+
+<action name="nextscene">
+	autorotate.stop();wait(1000);
+	set(ns, get(scene[get(xml.scene)].index));
+	set(maxs, get(scene.count));
+	add(ns,1);
+	if(ns == maxs, set(ns,0));
+	loadscene(get(scene[get(ns)].name), null, MERGE, BLEND(1.5));
+	autorotate.start();
+</action>
+//
+
+
+<!-- nadir logo (a distorted hotspot)  2018-4-11 补地logo -->
+<hotspot name="nadirlogo" keep="true"
+				 url="krpano-roundlogo.png"
+				 ath="0"
+				 atv="90"
+				 distorted="true"
+				 scale="1.0"
+				 rotate="0.0"
+				 onclick="openurl('http://www.baidu.com');"
+				 />
+
+<!-- onviewchange event - update logo rotation on pano rotation 2018-4-11 补地logo -->
+<events name="nadirlogo" keep="true" onviewchange="copy(hotspot[nadirlogo].rotate, view.hlookat);" />
+
+<!--  2018-4-11 启动画面开始  -->
+
+<layer name="startpic_container"
+preload="true"
+alpha="1"
+handcursor="true"
+enabled="true"
+children="true"
+visible="true"
+zorder="90"
+type="container"
+maskchildren="true"
+keep="true"
+width="100%"
+height="100%"
+bgcolor="0xf9dcb2"
+bgalpha="1" >
+
+<layer name="skin_title_logo3"
+zorder="100"
+keep="true"
+x="0"
+y="-80"
+align="center"
+url="krpano-roundlogo.png"
+scale="1"
+alpha="0"
+onloaded="tween(alpha,1.0);tween(layer[skin_title_pr].alpha,1.0);"
+onclick="tween(layer[startpic_container].ox,-2500,1);
+delayedcall(2,set(layer[startpic_container].enabled,false);
+set(layer[startpic_container].visible,false));
+stopdelayedcall(startpic1);stopdelayedcall(startpic2);"
+enabled="false" />
+
+<layer name="skin_title_pr"
+background="true"
+backgroundcolor="0x999999"
+roundedge="10"
+backgroundalpha="0"
+border="true"
+bordercolor="0x999999"
+borderalpha="0"
+borderwidth="4.0"
+glow="0"
+glowcolor="0xCCCCCC"
+visible="true"
+keep="true"
+alpha="0"
+onloaded=""
+children="false"
+align="center"
+zorder="100"
+autowidth="auto"
+height="40"
+url="%SWFPATH%/plugins/textfield.swf"
+html="全景漫游"
+css="text-align:center; color:#ed0753; font-family:SimHei; font-weight:bold; font-size:32px;"
+x="0"
+y="150"
+onclick="tween(layer[startpic_container].ox,-2500,1);
+delayedcall(2,set(layer[startpic_container].enabled,false);
+set(layer[startpic_container].visible,false));
+stopdelayedcall(startpic1);stopdelayedcall(startpic2);"
+enabled="false"
+
+/>
+
+</layer>
+
+<events name="startlogoevents" keep="true"
+onloadcomplete="
+ifnot(layer[skin_title_logo3].enabled,
+set(layer[skin_title_logo3].enabled,true);
+set(layer[skin_title_pr].enabled,true);
+delayedcall(startpic1,4,tween(layer[startpic_container].ox,-2500,1));
+delayedcall(startpic2,5,set(layer[startpic_container].enabled,false);set(layer[startpic_container].visible,false));)
+"/>
+
+<!-- 启动画面结束 1-->
+
+<events name="startlogoevents" keep="true"
+onloadcomplete="
+ifnot(layer[skin_title_logo3].enabled,
+set(layer[skin_title_logo3].enabled,true);
+set(layer[skin_title_pr].enabled,true);
+delayedcall(startpic1,4,tween(layer[startpic_container].ox,-2500,1));
+delayedcall(startpic2,5,set(layer[startpic_container].enabled,false);set(layer[startpic_container].visible,false));)
+"/>
+<!-- 启动画面结束 2-->
+</krpano>

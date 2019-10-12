@@ -1,0 +1,106 @@
+﻿<krpano>
+	<!-- qqvideo-player.xml 1.19 -->
+
+
+	<qqplayer_settings
+		maxsize="0.80"
+		parameters="tiny=0&amp;auto=0"
+		/>
+
+
+	<action name="qqplayer_open">
+		if(layer[qqplayer_bg],
+			<!-- error -->
+			trace('qqplayer_open - there is already a qqplayer!'-);
+		  ,
+			<!-- step one - add a background layer and fade it in -->
+			addlayer(qqplayer_bg);
+			set(layer[qqplayer_bg].type, container);
+			set(layer[qqplayer_bg].zorder, 999999);
+			set(layer[qqplayer_bg].align, lefttop);
+			set(layer[qqplayer_bg].width, 100%);
+			set(layer[qqplayer_bg].height, 100%);
+			set(layer[qqplayer_bg].bgcolor, 0x000000);
+			set(layer[qqplayer_bg].bgalpha, 0.8);
+			set(layer[qqplayer_bg].bgcapture, true);
+			set(layer[qqplayer_bg].handcursor, false);
+			set(layer[qqplayer_bg].alpha, 0.0);
+			set(layer[qqplayer_bg].onclick, qqplayer_close() );
+			tween(layer[qqplayer_bg].alpha, 1.0, 0.5, default,
+				<!-- step two - after the fade-in add the  player -->
+				addlayer(qqplayer_plugin);
+				set(layer[qqplayer_plugin].parent, layer[qqplayer_bg]);
+				set(layer[qqplayer_plugin].align, center);
+				set(layer[qqplayer_plugin].alpha, 0.0);
+
+				<!-- fit into the available screen space ( videos are always 16:9) -->
+				div(aspect, 16, 9);
+				mul(new_videowidth, stagewidth, qqplayer_settings.maxsize);
+				div(new_videoheight, new_videowidth, aspect);
+				mul(max_videoheight, stageheight, qqplayer_settings.maxsize);
+				if(new_videoheight GT max_videoheight,
+					copy(new_videoheight, max_videoheight);
+					mul(new_videowidth, new_videoheight, aspect);
+				  );
+				roundval(new_videowidth);
+				roundval(new_videoheight);
+				copy(layer[qqplayer_plugin].width, new_videowidth);
+				copy(layer[qqplayer_plugin].height, new_videoheight);
+
+			
+
+				if(device.html5,
+					<!-- html5 - embed iframe via the textfield plugin -->
+					if(%2 == 'qq',
+					txtadd(iframecode, '[iframe width="',get(layer[qqplayer_plugin].width),'" height="',get(layer[qqplayer_plugin].height),'" src="https://v.qq.com/iframe/player.html?vid=','%1','&amp;',get(qqplayer_settings.parameters),'" frameborder="0" allowfullscreen][/iframe]');
+					);
+					if(%2 == 'youku',
+					txtadd(iframecode, '[iframe width="',get(layer[qqplayer_plugin].width),'" height="',get(layer[qqplayer_plugin].height),'" src="http://player.youku.com/embed/','%1','&amp;',get(qqplayer_settings.parameters),'" frameborder="0" allowfullscreen][/iframe]');
+					);
+					if(%2 == 'iqiyi',
+					txtadd(iframecode, '[iframe width="',get(layer[qqplayer_plugin].width),'" height="',get(layer[qqplayer_plugin].height),'" src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=','%1','&amp;accessToken=2.f22860a2479ad60d8da7697274de9346&amp;appKey=3955c3425820435e86d0f4cdfe56f5e7&amp;appId=1368&amp;height=100%&amp;width=100%',get(qqplayer_settings.parameters),'" frameborder="0" allowfullscreen][/iframe]');
+					);
+
+					if(%2 == 'bilibili',
+					txtadd(iframecode, '[iframe width="',get(layer[qqplayer_plugin].width),'" height="',get(layer[qqplayer_plugin].height),'" src="https://www.bilibili.com/blackboard/html5player.html?','%1','&amp;',get(qqplayer_settings.parameters),'" frameborder="0" allowfullscreen][/iframe]');
+					);
+					if(%2 == 'sohu',
+					txtadd(iframecode, '[iframe width="',get(layer[qqplayer_plugin].width),'" height="',get(layer[qqplayer_plugin].height),'" src="http://tv.sohu.com/upload/static/share/share_play.html#','%1','&amp;',get(qqplayer_settings.parameters),'" frameborder="0" allowfullscreen][/iframe]');
+					);
+					if(%2 == 'mgtv',
+					txtadd(iframecode, '[iframe width="',get(layer[qqplayer_plugin].width),'" height="',get(layer[qqplayer_plugin].height),'" src="http://player.hunantv.com/mgtv_v5_main/main.swf?play_type=1&amp;video_id=','%1','&amp;',get(qqplayer_settings.parameters),'" frameborder="0" allowfullscreen][/iframe]');
+					);
+					if(%2 == 'pp',
+					txtadd(iframecode, '[iframe width="',get(layer[qqplayer_plugin].width),'" height="',get(layer[qqplayer_plugin].height),'" src="http://player.pptv.com/iframe/index.html#id=','%1','&amp;',get(qqplayer_settings.parameters),'" frameborder="0" allowfullscreen][/iframe]');
+					);
+					copy(layer[qqplayer_plugin].html, iframecode);
+					set(layer[qqplayer_plugin].padding, 0);
+					set(layer[qqplayer_plugin].url, 'textfield.swf');
+					set(layer[qqplayer_plugin].interactivecontent, true);
+					set(layer[qqplayer_plugin].onloaded, qqplayer_plugin_ready() );
+				  ,
+					<!-- flash - embed the flashplayer player -->
+					
+				  );
+			  );
+		  );
+	</action>
+
+	<action name="qqplayer_plugin_ready">
+		if(layer[qqplayer_plugin],
+			tween(layer[qqplayer_plugin].alpha, 1.0);
+		  );
+	</action>
+
+	<action name="qqplayer_close">
+		set(layer[qqplayer_bg].onclick, null);
+
+		tween(layer[qqplayer_plugin].alpha, 0.0, 0.25, default);
+
+		tween(layer[qqplayer_bg].alpha,0.0, 0.50, default,
+			removelayer(qqplayer_bg);
+			removelayer(qqplayer_plugin);
+		  );
+	</action>
+
+</krpano>

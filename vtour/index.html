@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>杭州西湖景区全景漫游系统——by杭永冲</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<style>
+		@-ms-viewport { width:device-width; }
+		@media only screen and (min-device-width:800px) { html { overflow:hidden; } }
+		html { height:100%; }
+		#fwl{ z-index: 999;position: absolute;right: 10px;top:10px;font-size: 25px;color: #fcf35f}
+		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+	</style>
+</head>
+<body>
+
+<script src="tour.js"></script>
+<div id="fwl">
+	<script type="text/javascript">
+var caution=false
+function setCookie(name,value,expires,path,domain,secure)
+{
+ var curCookie=name+"="+escape(value) +
+ ((expires)?";expires="+expires.toGMTString() : "") +
+ ((path)?"; path=" + path : "") +
+ ((domain)? "; domain=" + domain : "") +
+ ((secure)?";secure" : "")
+ if(!caution||(name + "=" + escape(value)).length <= 4000)
+ {
+ document.cookie = curCookie
+ }
+ else if(confirm("Cookie exceeds 4KB and will be cut!"))
+ {
+ document.cookie = curCookie
+ }
+}
+function getCookie(name)
+{
+ var prefix = name + "="
+ var cookieStartIndex = document.cookie.indexOf(prefix)
+ if (cookieStartIndex == -1)
+ {
+ return null
+ }
+ var cookieEndIndex=document.cookie.indexOf(";",cookieStartIndex+prefix.length)
+ if(cookieEndIndex == -1)
+ {
+ cookieEndIndex = document.cookie.length
+ }
+ return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex))
+}
+function deleteCookie(name, path, domain)
+{
+ if(getCookie(name))
+ {
+ document.cookie = name + "=" +
+ ((path) ? "; path=" + path : "") +
+ ((domain) ? "; domain=" + domain : "") +
+ "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+ }
+}
+function fixDate(date)
+{
+ var base=new Date(0)
+ var skew=base.getTime()
+ if(skew>0)
+ {
+ date.setTime(date.getTime()-skew)
+ }
+}
+var now=new Date()
+fixDate(now)
+now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000)
+var visits = getCookie("counter")
+if(!visits)
+{
+ visits=1;
+}
+else
+{
+ visits=parseInt(visits)+1;
+}
+setCookie("counter", visits, now)
+document.write("您当前访问次数：" + visits + "")
+</script>
+</div>
+<div id="pano" style="width:100%;height:100%;">
+	<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+	<script>
+		embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"auto", mobilescale:1.0, passQueryParameters:true});
+	</script>
+
+</div>
+
+
+
+</body>
+</html>
