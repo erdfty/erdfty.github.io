@@ -1,20 +1,20 @@
-ף�أ� ShadowsocksR �Ѿ����óɹ�!
-������ IP:  155.138.213.121 
-������ �˿�:  3038 
-��������:  Qazwsx7410? 
-����:  aes-256-cfb 
-Э��:  auth_sha1_v4 
-����:  http_simple 
+祝贺！ ShadowsocksR 已经配置成功!.213.121 
+服务器 IP:  155.138
+服务器 端口:  3038 
+连接密码:  (daxie的q)azwsx7410? 
+加密:  aes-256-cfb 
+协议:  auth_sha1_v4 
+混淆:  http_simple 
 
 
-�����غ���ϵͳ�汾��Ӧ��SSR�ͻ���ʹ�ø÷��� 
-SSR���пͻ������ص�ַ��
+请下载和你系统版本对应的SSR客户端使用该服务 
+SSR所有客户端下载地址：
  https://www.qcgzxw.cn/301.html 
 
-Vultrʵս�ssr+���ٽ̳̣��ڸ���Ƶ�̳̣���
+Vultr实战搭建ssr+锐速教程（内附视频教程）：
  https://www.qcgzxw.cn/1640.html 
 
-С��'s blog��ַ�� www.qcgzxw.cn 
+小文's blog地址： www.qcgzxw.cn 
 
 [root@vultr ~]# ^C
 [root@vultr ~]# 
