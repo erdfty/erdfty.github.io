@@ -1,7 +1,7 @@
 祝贺！ ShadowsocksR 已经配置成功!.213.121 
 服务器 IP:  155.138
 服务器 端口:  3038 
-连接密码:  (daxie的q)azwsx7410? 
+连接密码:  (daxie的q)azwsx7410(你懂的？)
 加密:  aes-256-cfb 
 协议:  auth_sha1_v4 
 混淆:  http_simple 
