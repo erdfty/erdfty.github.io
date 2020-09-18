@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>天气预报</title>
+<meta name="keywords" content="天气预报" />
+<meta name="description" content="天气预报" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+<script src="images/comm.js"></script>	
+<link href="images/comm.css" rel="stylesheet" type="text/css" />
+<base target=_blank>
+</head>
+
+<script language="javascript"> 
+var tmpArr,QueryString; 
+var URL = document.location.toString(); 
+if(URL.lastIndexOf("?")!=-1){ 
+	QueryString= URL.substring(URL.lastIndexOf("?")+1,URL.length); 
+	tmpArr=QueryString.split("&"); 
+	for (i=0;i<=tmpArr.length;i++) { 
+		try{eval (tmpArr[i]);} 
+		catch (e){ 
+			var re = new RegExp("(.*)=(.*)","ig"); 
+			re.exec(tmpArr[i]); 
+			try{eval (RegExp.$1+"="+"\""+RegExp.$2+"\"");} 
+			catch(e){} 
+		} 
+	} 
+} 
+else 
+{ 
+	QueryString=""; 
+} 
+
+var city=125;
+if (typeof(cityID)!="undefined") city=cityID;
+</script> 
+
+
+
+<body>
+	<div class="top">
+		<div class="logo"><a href="http://www.100daohang.cn/"><img src="images/logo.gif" alt="wugang5网址导航、网址大全、实用查询" /></a>	</div>		
+		<div class="infoshow">
+		  </object>
+		</div>
+		<div class="infoshow" style="margin-top:3px;">
+			<span id="dateinfo"></span>						
+		</div>
+		<div class="infoshow" style="margin-top:3px;">
+			<span id="Wealth"></span>						
+		</div>
+	</div>	
+	<div class="tab">
+		<div class="activated" id="tabwebpage" onclick="tabSwitch('webpage')">网 页</div>
+		<div class="normal" id="tabmp3" onclick="tabSwitch('mp3')">MP3</div>
+		<div class="normal" id="tabimages" onclick="tabSwitch('images')">图 片</div>
+		<div class="normal" id="tabvideo" onclick="tabSwitch('video')">视 频</div>
+		<div class="normal" id="tabditu" onclick="tabSwitch('ditu')">地图</div>
+		<div class="normal" id="tabtranslator" onclick="tabSwitch('translator')">翻 译</div>
+		<div class="normal" id="tabtaobao" onclick="tabSwitch('taobao')">购物</div>
+		<div class="other"></div>		
+	</div>
+	<div class="search">
+		<table width="100%" height="60" cellpadding="0" cellspacing="0">
+		  <tbody>
+		  <tr>
+			<td align="center" width="50%" valign="middle"><span id="baidusearch"><form name="formbaidu" method="get" onsubmit="return baiduSub()"><img name="baidulogo" src="images/baidu.gif" width="88" height="31" align="absmiddle" /><input type="text" name="word" class="input" onkeyup="baiduInput()" /><input type=hidden name=type value=webpage /><input type=hidden name=wd /><input type=hidden name=ct><input type=hidden name=tn><input name=cl type=hidden><input name=lm type=hidden><input name=bs type=hidden><input name=q type=hidden>
+			    <input type="image" id="baidusubmit" src="images/search_baidu.gif" align="absmiddle" />
+			</form></span></td>
+		    <td align="left" width="50%" valign="middle"><span id="googlesearch"><form name="formgoogle" method="get" onsubmit="return googleSub()"><img name="googlelogo" src="images/google.gif" width="80" height="31" align="absmiddle" /><input type="text" name="q" class="input" onkeyup="googleInput()" /><input type="hidden" name="type" value="webpage" /><input name=hl type=hidden value=zh-CN><input name=search type=hidden>
+		        <input type="image" id="googlesubmit" src="images/search_google.gif" align="absmiddle" />
+		    </form></span><span class='hotlink' id="searchhot"></span></td>
+		  </tr>
+		  </tbody>
+	  </table>
+	</div>
+	<div class="line"></div>
+	<div class="navigation">
+		<div class="activated"><img src="images/s01.gif" align="absmiddle" /> <a href="/"  target="_self">常用网站</a></div>		
+		<div class="normal"><img src="images/s03.gif" align="absmiddle" /> <a href="software.html" target="_self">常用软件</a></div>
+		<div class="normal"><img src="images/s04.gif" align="absmiddle" /> <a href="query.html" target="_self">常用查询</a></div>
+		<div class="normal"><img src="images/s05.gif" align="absmiddle" /> <a href="game.html" target="_self">热门网游</a></div>
+		<div class="normal"><img src="images/s02.gif" align="absmiddle" /> <a href="hangye.html" target="_self">行业网站</a></div>
+		<div class="normal"><img src="images/s06.gif" align="absmiddle" /> <a href="train/train.html" target="_self">列车时刻</a></div>
+		<div class="normal"><img src="images/s07.gif" align="absmiddle" /> <a href="feizhuliu.html" target="_self">非主流</a></div>
+		<div class="normal"><img src="images/s01.gif" align="absmiddle" /> <a href="weather.html" target="_self">天气预报</a></div>
+	</div>
+	<div class="list" style=" margin-top:8px;">
+		<table width="606" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF" style="margin-top:5px; margin-bottom:12px; color:#333333;">
+		  <tr>
+			<td colspan="6" align="center"><span id="weatherinfo"></span></td>
+	      </tr>
+	  </table>
+	  <div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="copyright">声明：本站所有LOGO都归原站所有，但本站所有其它设计均为原创，严禁拷贝源代码！<br> <a href="http://www.sinaapp.com"><img src="images/sae.gif" width="117" height="12"></a>
+Copyright &copy; 2013 <a href="./index.html">有品导航</a> 陕ICP备08007254号-1  <script type="text/javascript" src="js/tj.js"></script></div>
+	<div class="line"></div>
+</body>
+</html>
+
+<span style="display:none;">
+<script src="images/calendar.js"></script>
+<script src="images/weather.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+MiniSite.Weather.print("Wealth");
+/*]]>*/
+document.getElementById('weatherinfo').innerHTML = "<iframe src='http://weather.news.qq.com/inc/07_dc"+ city +".htm' width='606' height='380' scrolling='no' frameborder='0'></iframe>";
+</script>

@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>行业网站导航</title>
+<meta name="keywords" content="行业网站导航" />
+<meta name="description" content="行业网站导航" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+<script src="images/comm.js"></script>	
+<link href="images/comm.css" rel="stylesheet" type="text/css" />
+<base target=_blank>
+<style>
+.weblink A:link{color:#275B80; text-decoration:underline;}
+.weblink A:hover{color:#BC2931; text-decoration:none;}
+.weblink A:visited{color:#275B80; text-decoration:underline;}
+.weblink A:active{color:#BC2931;}
+</style>
+</head>
+
+<body>
+	<div class="top">
+		<div class="logo"><a href="http://www.100daohang.cn/"><img src="images/logo.gif" alt="wugang5网址导航、网址大全、实用查询" /></a>	</div>		
+		<div class="infoshow">
+		</div>
+		<div class="infoshow" style="margin-top:3px;">
+			<span id="dateinfo"></span>						
+		</div>
+		<div class="infoshow" style="margin-top:3px;">
+			<span id="Wealth"></span>						
+		</div>
+	</div>	
+	<div class="tab">
+		<div class="activated" id="tabwebpage" onclick="tabSwitch('webpage')">网 页</div>
+		<div class="normal" id="tabmp3" onclick="tabSwitch('mp3')">MP3</div>
+		<div class="normal" id="tabimages" onclick="tabSwitch('images')">图 片</div>
+		<div class="normal" id="tabvideo" onclick="tabSwitch('video')">视 频</div>
+		<div class="normal" id="tabditu" onclick="tabSwitch('ditu')">地图</div>
+		<div class="normal" id="tabtranslator" onclick="tabSwitch('translator')">翻 译</div>
+		<div class="normal" id="tabtaobao" onclick="tabSwitch('taobao')">购物</div>
+		<div class="other"></div>		
+	</div>
+	<div class="search">
+		<table width="100%" height="60" cellpadding="0" cellspacing="0">
+		  <tbody>
+		  <tr>
+			<td align="center" width="50%" valign="middle"><span id="baidusearch"><form name="formbaidu" method="get" onsubmit="return baiduSub()"><img name="baidulogo" src="images/baidu.gif" width="88" height="31" align="absmiddle" /><input type="text" name="word" class="input" onkeyup="baiduInput()" /><input type=hidden name=type value=webpage /><input type=hidden name=wd /><input type=hidden name=ct><input type=hidden name=tn><input name=cl type=hidden><input name=lm type=hidden><input name=bs type=hidden><input name=q type=hidden>
+			    <input type="image" id="baidusubmit" src="images/search_baidu.gif" align="absmiddle" />
+			</form></span></td>
+		    <td align="left" width="50%" valign="middle"><span id="googlesearch"><form name="formgoogle" method="get" onsubmit="return googleSub()"><img name="googlelogo" src="images/google.gif" width="80" height="31" align="absmiddle" /><input type="text" name="q" class="input" onkeyup="googleInput()" /><input type="hidden" name="type" value="webpage" /><input name=hl type=hidden value=zh-CN><input name=search type=hidden>
+		        <input type="image" id="googlesubmit" src="images/search_google.gif" align="absmiddle" />
+		    </form></span><span class='hotlink' id="searchhot"></span></td>
+		  </tr>
+		  </tbody>
+	  </table>
+	</div>
+	<div class="line"></div>
+	<div class="navigation">
+		<div class="activated"><img src="images/s01.gif" align="absmiddle" /> <a href="/"  target="_self">常用网站</a></div>		
+		<div class="normal"><img src="images/s03.gif" align="absmiddle" /> <a href="software.html" target="_self">常用软件</a></div>
+		<div class="normal"><img src="images/s04.gif" align="absmiddle" /> <a href="query.html" target="_self">常用查询</a></div>
+		<div class="normal"><img src="images/s05.gif" align="absmiddle" /> <a href="game.html" target="_self">热门网游</a></div>
+		<div class="normal"><img src="images/s02.gif" align="absmiddle" /> <a href="hangye.html" target="_self">行业网站</a></div>
+		<div class="normal"><img src="images/s06.gif" align="absmiddle" /> <a href="train/train.html" target="_self">列车时刻</a></div>
+		<div class="normal"><img src="images/s07.gif" align="absmiddle" /> <a href="feizhuliu.html" target="_self">非主流</a></div>
+		<div class="normal"><img src="images/s01.gif" align="absmiddle" /> <a href="weather.html" target="_self">天气预报</a></div>
+	</div>
+	<div class="mail">　行业网址大全！</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">综合商业</div>
+		<div class="weblink"><a href="http://china.alibaba.com/">阿里巴巴</a>　<a href="http://www.hc360.com/">慧聪网</a>　<a href="http://china.goodsres.com/">商品资源网</a>　<a href="http://www.globalsources.com.cn/">环球资源网</a>　<a href="http://cn.made-in-china.com/">中国制造网</a>　<a href="http://china.toocle.com/">生意宝</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">化　　工</div>
+		<div class="weblink"><a href="http://china.chemnet.com/">中国化工网</a>　<a href="http://www.chemnet.com/">全球化工网</a>　<a href="http://www.chemindustry.com.cn/">美国化工网</a>　<a href="http://www.china-1818.net/">中国日化网</a>　<a href="http://www.polymer.cn/">中国聚合物</a>　<a href="http://www.21cp.net/">中塑在线</a>　<a href="http://china.echinachem.com/Chinese/default.aspx">世易化工网</a>　<a href="http://www.ccecn.com/">中国化工电子商务网</a>　<a href="http://www.cheminfo.gov.cn/">中国化工信息网</a></div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">纺织皮革</div>
+		<div class="weblink"><a href="http://www.texnet.com.cn/">中国纺织网</a>　<a href="http://www.texindex.com.cn/">中华纺织网</a>　<a href="http://www.tnc.com.cn/">全球纺织网</a>　<a href="http://www.sinotex.cn/">锦桥纺织网</a>　<a href="http://www.hometexnet.com/">中国家纺网</a>　<a href="http://www.cnhtol.com/">家纺在线</a>　<a href="http://www.chinayarn.com/mart/index.asp">中国纱线网</a>　<a href="http://www.chinayarn.com/mart/index.asp">中国纱线网</a>　<a href="http://www.tex365.com/">365纺织网</a>　<a href="http://www.ctma.net/">中华纺机网</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">包装印刷</div>
+		<div class="weblink"><a href="http://www.pack.net.cn/">中国包装网</a>　<a href="http://www.pka.com.cn/">包装市场网</a>　<a href="http://www.cpp114.com/">包装印刷网</a>　<a href="http://www.interpack.com.cn/">国际包装网</a>　<a href="http://www.cgan.net/">大中华印艺</a>　<a href="http://www.cn-pp.com/index.html">包装印刷在线</a>　<a href="http://www.cn-pp.com/index.html">包装印刷在线</a>　<a href="http://www.gbpack.com/index.shtml">中国包装标准网</a>　<a href="http://www.plastic-pack.com/">中国塑料包装网</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">机　　械</div>
+		<div class="weblink"><a href="http://china.machine365.com/">中华机械网</a>　<a href="http://www.jx.cn/">中国机械网</a>　　<a href="http://china.globalhardwares.com/">中国五金网</a>　<a href="http://www.5117.com/">我要仪器网</a>　<a href="http://www.zgbfw.com/">中国泵阀网</a>　<a href="http://cn.plasticmould.net/">塑料模具网</a>　<a href="http://www.famens.com/">全球阀门网</a>　<a href="http://www.lc800.com/">中国机械与配件网</a>　<a href="http://www.clima.org.cn/">中国轻工机械网</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">电子电气</div>
+		<div class="weblink"><a href="http://www.gongkong.com/">中国工控网</a>　<a href="http://www.hqew.com/">华强电子网</a>　<a href="http://www.chinaswitch.com/">中国开关网</a>　<a href="http://china.em51.com/">国际电气网</a>　<a href="http://www.21ic.com/">中国电子网</a>　<a href="http://www.dianyuan.com/">电源网</a>　<a href="http://www.ic.net.cn/">IC交易网</a>　<a href="http://www.qic.com.cn/">全球IC采购网</a>　<a href="http://www.ic-city.com/">中国IC城</a>　<a href="http://www.eepw.com.cn/">电子产品世界</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">建筑建材</div>
+		<div class="weblink"><a href="http://www.jc001.cn/">建材第一网</a>　<a href="http://www.abbs.com.cn/bbs/">ABBS建筑论坛</a>　<a href="http://www.zhulong.com/">筑龙网</a>　<a href="http://www.xnjcw.com/">西部建材网</a>　<a href="http://www.c-bm.com/">建材商务网</a>　<a href="http://www.chinacements.com/">中国水泥网</a>　<a href="http://www.stonebuy.com/">中国石材网</a>　<a href="http://www.chinaasc.org/">中国建筑学会</a>　<a href="http://www.luban.com/">鲁班网络</a>　<a href="http://www.ccd.com.cn/">中国建筑装饰</a></div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">农　　林</div>
+		<div class="weblink"><a href="http://www.zgny.com.cn/">中国农业网</a>　<a href="http://www.agri.gov.cn/">农业信息网</a>　<a href="http://www.aweb.com.cn/">农博网</a>　<a href="http://www.yuanlin.com/">中国园林网</a>　<a href="http://www.fert.cn/">中国化肥网</a>　<a href="http://www.myttc.cn/">名优特产网</a>　<a href="http://www.ag365.com/">365农业网</a>　<a href="http://www.jinnong.cn/">金农网</a>　<a href="http://www.vegnet.com.cn/">中国蔬菜网</a>　<a href="http://www.caaa.cn/">中国畜牧业信息网</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">服装服饰</div>
+		<div class="weblink"><a href="http://www.efu.com.cn/">中国服装网</a>　<a href="http://www.hzfz.com.cn/">浙江服装网</a>　<a href="http://www.51fashion.com.cn/">中华服装网</a>　<a href="http://www.shoes.net.cn/">环球鞋网</a>　<a href="http://www.gdfzfs.com/">广东服装网</a>　<a href="http://www.topsjs.com/">国际服装网</a>　<a href="http://www.china-ef.com/">中国品牌服装网</a>　<a href="http://www.fzxm.com/">中国服装鞋帽网</a>　<a href="http://www.cnga.org.cn/">中国服装协会</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">医药健康</div>
+		<div class="weblink"><a href="http://www.39.net/">39健康网</a>　<a href="http://www.xywy.com/">寻医问药网</a>　<a href="http://www.pharmnet.com.cn/">中国医药网</a>　<a href="http://www.dxy.cn/">丁香园</a>　<a href="http://www.69jk.cn/">中国健康网</a>　<a href="http://www.51qe.cn/">大众医药网</a>　<a href="http://www.fx120.net/">放心医苑</a>　<a href="http://www.cnm21.com/">医药在线</a>　<a href="http://www.chinapharm.com.cn/">中国药网</a>　<a href="http://www.ylsw.net/">医疗商务网</a>　<a href="http://www.cde.org.cn/">国家药监局</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">食品餐饮</div>
+		<div class="weblink"><a href="http://www.21food.cn/">食品商务网</a>　<a href="http://www.cnfoods.org/">保健食品网</a>　<a href="http://www.chinaliquor.net/">中国洋酒网</a>　<a href="http://www.tech-food.com/">食品科技网</a>　<a href="http://www.dashipin.com/">大食品网</a>　<a href="http://www.efoods.com.cn/">全国食品网</a>　<a href="http://www.spjxcn.com/">食品机械行业网</a>　<a href="http://www.foodqs.com/">中国食品产业网</a>　<a href="http://www.cnsoc.org/">中国营养学会</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">冶金能源</div>
+		<div class="weblink"><a href="http://www.custeel.com/">联合钢铁网</a>　<a href="http://www.china5e.com/">中国能源网</a>　<a href="http://www.mysteel.com/">我的钢铁网</a>　<a href="http://www.3jjj.com/">中煤网</a>　<a href="http://www.zgmt.com.cn/">煤炭网</a>　<a href="http://www.powerproduct.com/">电力产品网</a>　<a href="http://www.chinesemetal.com/">中国冶金网</a>　<a href="http://www.chinamining.com.cn/">中国矿业网</a>　<a href="http://www.cnfeol.com/">中国铁合金在线</a>　<a href="http://www.fenmoyejin.com/">中华粉末冶金网</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">石　　油</div>
+		<div class="weblink"><a href="http://www.chinaoilonline.com/">石油在线</a>　<a href="http://www.oilchina.com/">中国石油商务网</a>　<a href="http://www.oilchem.net/">隆众石化网</a>　<a href="http://www.oilprice.cn/">中国石油网</a>　<a href="http://www.chemall.com.cn/">石油和化工</a>　<a href="http://www.oilchina.com/">石油商务网</a>　<a href="http://www.petroecon.com.cn/">石油经济网</a>　<a href="http://www.pmnet.cn/">石油物资网</a>　<a href="http://www.seaso.com/">石油设备网</a>　<a href="http://www.sinopec.com/">中国石化</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">环保纸业</div>
+		<div class="weblink"><a href="http://www.chinapaper.net/">中国纸业网</a>　<a href="http://www.chinaenvironment.com/">中国环保网</a>　<a href="http://www.paper.com.cn/">中国纸网</a>　<a href="'">中国造纸网</a>　<a href="http://www.c-water.com.cn/">水工业网</a>　<a href="http://www.ep168.com/">环保商务网</a>　<a href="http://www.chinaep.net/">中华环保互联</a>　<a href="http://www.eedu.org.cn/">中国环境生态网</a>　<a href="http://www.ce65.com/">中国环境资源网</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">房产家居</div>
+		<div class="weblink"><a href="http://www.soufun.com/">搜房网</a>　<a href="http://house.sina.com.cn/">新浪房产</a>　<a href="http://house.focus.cn/">焦点房产</a>　<a href="http://www.jiatx.com/">家天下家具门户</a>　<a href="http://www.chinese-home.com/">中国家具网</a>　<a href="http://www.lighting86.com.cn/">灯饰商贸网</a>　<a href="http://www.cnhome.com/">中国家居网</a>　<a href="http://www.taofw.cn/">淘房屋(二手房、租房)</a>　<a href="http://www.365f.com/">天天家具网</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">家用电器</div>
+		<div class="weblink"><a href="http://www.ea3w.com/">万维家电网</a>　<a href="http://www.cheaa.com/">中国家电网</a>　<a href="http://www.hea.cn/">家电网</a>　<a href="http://www.jdunion.com/">家电联盟</a>　<a href="http://www.chinadq.com/">中国电器网</a>　<a href="http://www.eaonline.com.cn/">中国家电在线</a>　<a href="http://www.chinaswitch.com/">中国开关网</a>　<a href="http://www.eastac.com/">东方空调网</a>　<a href="http://www.chinahvacr.com/">空调制冷网</a>　<a href="http://www.rhvacnet.com/">冷暖空调网</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">汽　　摩</div>
+		<div class="weblink"><a href="http://www.pcauto.com.cn/">太平洋汽车</a>　<a href="http://www.xcar.com.cn/">爱卡汽车网</a>　<a href="http://www.autohome.com.cn/">汽车之家</a>　<a href="http://www.cheshi.com/">网上车市</a>　<a href="http://www.bitauto.com/">易车网</a>　<a href="http://nj.qcwe.com/">南京二手车</a>　<a href="http://www.chinacar.com.cn/">中国汽车网</a>　<a href="http://www.auto18.com/">中华汽配网</a>　<a href="http://www.auto1688.com.cn/">汽车交易网</a>　<a href="http://www.sinopart.com.cn/">搜配网</a>　<a href="http://www.chinamotorcycle.com/">中国摩托车</a> </div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">工艺礼品</div>
+		<div class="weblink"><a href="http://www.jewelchina.com/">中国饰品网</a>　<a href="http://www.cgy.cn/">中国工艺网</a>　<a href="http://www.eyeworld.cn/">世界眼镜网</a>　<a href="http://www.chinawatchnet.com/">中国钟表网</a>　<a href="http://www.wenzhouglasses.com/">温州眼镜网</a>　<a href="http://www.mycollect.net/">华夏收藏网</a>　<a href="http://www.yaja.com.cn/">亚佳礼品网</a>　<a href="http://www.gift123.net/">广东礼品网</a>　<a href="http://www.ctoy.com.cn/">中外玩具礼品网</a> </div>
+		<div class="clear"></div>
+	</div>	
+    <div class="line"></div>
+	<div class="list">
+		<div class="webtype">文体办公</div>
+		<div class="weblink"><a href="http://www.haocai.com/">中国耗材网</a>　<a href="http://www.pen-home.com/">中国笔业网</a>　<a href="http://www.print-base.com/">打印耗材网</a>　<a href="http://www.21wenju.com/">世纪文具网</a>　<a href="http://www.chinastationery.com.cn/">文化用品网</a>　<a href="http://www.cn-office.com/">中国办公家具网</a>　<a href="http://www.cnstationery.com/">中国文具信息网</a>　<a href="http://www.sportgoods.cn/">体育用品网</a>　<a href="http://www.cyueqi.com/">中华乐器网</a></div>
+		<div class="clear"></div>
+	</div>	
+	<div class="line"></div>
+	<div class="copyright">声明：本站所有LOGO都归原站所有，但本站所有其它设计均为原创，严禁拷贝源代码！<br> <a href="http://www.sinaapp.com"><img src="images/sae.gif" width="117" height="12"></a>
+Copyright &copy; 2013 <a href="./index.html">有品导航</a> 陕ICP备08007254号-1  <script type="text/javascript" src="js/tj.js"></script></div>
+	<div class="line"></div>
+</body>
+</html>
+<span style="display:none;">
+<script src="images/calendar.js"></script>
+<script src="images/weather.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+MiniSite.Weather.print("Wealth");
+/*]]>*/
+</script>
+</span>

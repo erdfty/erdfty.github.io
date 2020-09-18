@@ -1,0 +1,197 @@
+.weblink_menhu {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(menhu/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_wenxue {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(wenxue/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_youxi {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(youxi/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_xiazai {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(xiazai/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_junshi {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(junshi/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_shipin {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(shipin/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_yinyue {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(yinyue/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_youxiang {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(youxiang/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_shequ {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(shequ/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_jiaoyou {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(jiaoyou/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_caijing {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(caijing/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_yinhang {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(yinhang/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_gouwu {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(gouwu/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_boke {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(boke/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_yingjian {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(yingjian/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_zhaopin {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(zhaopin/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_fangchan {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(fangchan/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.weblink_qiche {
+  height: 38px;
+  line-height: 38px;
+  margin: 3px 7px 0px 0px;
+  padding: 0px 6px 0px 0px;
+  border: 1px solid #e6e6e6;
+  float: left;
+  background-image: url(qiche/images/icon.png);
+  background-repeat: no-repeat;
+}

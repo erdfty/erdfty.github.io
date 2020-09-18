@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>最新列车时刻表查询,火车时刻表--12334网址导航</title>
+<meta name="keywords" content="最新列车时刻表查询,火车时刻表,12334网址导航,上网导航,网址,音乐,网游,软件" />
+<meta name="description" content="最新列车时刻表查询,火车时刻表,上网导航,网址之家,网址大全,网址,搜索,音乐,网游,软件,小游戏,天气预报,实用工具.最方便,最快捷,最多的上网导航" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+<script src="../images/comm.js"></script>	
+
+<script src="images/tools.js"></script>
+<script src="images/train.js"></script>
+<link href="../images/comm.css" rel="stylesheet" type="text/css" />
+<link href="images/css.css" rel="stylesheet" type="text/css" />
+<base target=_blank>
+</head>
+
+<body>
+	<div class="top">
+		<div class="logo"><a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.wugang5.com/');return(false);" style="BEHAVIOR: url(#default#homepage)"><img src="../images/logo.gif" alt="wugang5网址导航、网址大全、实用查询" /></a>	  
+		</div>		
+		<div class="infoshow">
+		</div>
+		<div class="infoshow" style="margin-top:3px;">
+			<span id="dateinfo"></span>						
+		</div>
+		<div class="infoshow" style="margin-top:3px;">
+			<span id="Wealth"></span>						
+		</div>
+	</div>	
+	<div class="tab">
+		<div class="activated" id="tabwebpage" onclick="tabSwitch('webpage')">网 页</div>
+		<div class="normal" id="tabmp3" onclick="tabSwitch('mp3')">MP3</div>
+		<div class="normal" id="tabimages" onclick="tabSwitch('images')">图 片</div>
+		<div class="normal" id="tabvideo" onclick="tabSwitch('video')">视 频</div>
+		<div class="normal" id="tabditu" onclick="tabSwitch('ditu')">地图</div>
+		<div class="normal" id="tabtranslator" onclick="tabSwitch('translator')">翻 译</div>
+		<div class="normal" id="tabtaobao" onclick="tabSwitch('taobao')">购物</div>
+		<div class="other"></div>		
+	</div>
+	<div class="search">
+		<table width="100%" height="60" cellpadding="0" cellspacing="0">
+		  <tbody>
+		  <tr>
+			<td align="center" width="50%" valign="middle"><span id="baidusearch"><form name="formbaidu" method="get" onsubmit="return baiduSub()"><img name="baidulogo" src="../images/baidu.gif" width="88" height="31" align="absmiddle" /><input type="text" name="word" class="input" onkeyup="baiduInput()" /><input type=hidden name=type value=webpage /><input type=hidden name=wd /><input type=hidden name=ct><input type=hidden name=tn><input name=cl type=hidden><input name=lm type=hidden><input name=bs type=hidden><input name=q type=hidden>
+			    <input type="image" id="baidusubmit" src="../images/search_baidu.gif" align="absmiddle" />
+			</form></span></td>
+		    <td align="left" width="50%" valign="middle"><span id="googlesearch"><form name="formgoogle" method="get" onsubmit="return googleSub()"><img name="googlelogo" src="../images/google.gif" width="80" height="31" align="absmiddle" /><input type="text" name="q" class="input" onkeyup="googleInput()" /><input type="hidden" name="type" value="webpage" /><input name=hl type=hidden value=zh-CN><input name=search type=hidden>
+		        <input type="image" id="googlesubmit" src="../images/search_google.gif" align="absmiddle" />
+		    </form></span><span class='hotlink' id="searchhot"></span></td>
+		  </tr>
+		  </tbody>
+	  </table>
+	</div>
+	<div class="line"></div>
+	<div class="navigation">
+		<div class="normal"><img src="../images/s01.gif" align="absmiddle" /> <a href="../index.html" target="_self">常用网站</a></div>		
+		<div class="normal"><img src="../images/s03.gif" align="absmiddle" /> <a href="../software.html" target="_self">常用软件</a></div>
+		<div class="normal"><img src="../images/s04.gif" align="absmiddle" /> <a href="../query.html" target="_self">常用查询</a></div>
+		<div class="normal"><img src="../images/s05.gif" align="absmiddle" /> <a href="../game.html" target="_self">热门网游</a></div>
+		<div class="normal"><img src="../images/s02.gif" align="absmiddle" /> <a href="../hangye.html" target="_self">行业网站</a></div>
+		<div class="activated"><img src="../images/s06.gif" align="absmiddle" /> <a href="train.html" target="_self">列车时刻</a></div>
+		<div class="normal"><img src="../images/s07.gif" align="absmiddle" /> <a href="../feizhuliu.html" target="_self">非主流</a></div>
+	</div>	
+	<div class="mail">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><B class=Top_B_arr></B><SPAN> <a href="/"  target="_self">火车时刻表查询</A></SPAN></td>
+        </tr>
+      </table>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<DIV id=queryDiv>
+			<DIV class=Cont_tit>
+				<H1>火车时刻查询</H1><SPAN>提供全国火车起点/终点/车次信息查询</SPAN>
+			</DIV>
+			<DIV class=Cont>
+				<FORM name="trainform" onSubmit="return fQueryS2S();" target="_self">
+				<DIV class=lc_wide>
+				<H2>　 按<STRONG>区间</STRONG>查询：出发站： 
+				  <INPUT class=inp_jsq id=from 
+				onblur="this.style.borderColor='#7F9DB9';this.style.backgroundColor='#FFF'" 
+				onfocus="this.style.borderColor='#889297';this.style.backgroundColor='#FFFFE8'" 
+				name=from> 　 
+				  到达站： 
+				  <INPUT class=inp_jsq id=end 
+				onblur="this.style.borderColor='#7F9DB9';this.style.backgroundColor='#FFF'" 
+				onfocus="this.style.borderColor='#889297';this.style.backgroundColor='#FFFFE8'" 
+				name=end> 　
+				  <INPUT class=btn_comm type=submit value=" 查询 " name=submit> 
+				</H2>　 
+				</DIV>
+				</FORM>
+				<FORM onSubmit="return fQueryStation();">
+				<DIV class=lc_wide>
+				<H2>　 按<STRONG>车站</STRONG>查询：车站名： 
+				  <INPUT class=inp_jsq id=station 
+				onblur="this.style.borderColor='#7F9DB9';this.style.backgroundColor='#FFF'" 
+				onfocus="this.style.borderColor='#889297';this.style.backgroundColor='#FFFFE8'" 
+				name=station> 　 
+				  <INPUT class=btn_comm type=submit value=" 查询 " name=Submit> 
+				</H2>　 
+				</DIV>
+				</FORM>
+				<FORM onSubmit="return fQueryNumber();">
+				<DIV class=lc_wide style="BORDER-BOTTOM-WIDTH: 0px">
+				<H2>　 按<STRONG>车次</STRONG>查询：车次号： 
+				  <INPUT class=inp_jsq id=number 
+				onblur="this.style.borderColor='#7F9DB9';this.style.backgroundColor='#FFF'" 
+				onfocus="this.style.borderColor='#889297';this.style.backgroundColor='#FFFFE8'" 
+				name=number> 　 
+				  <INPUT class=btn_comm type=submit value=" 查询 " name=Submit> 
+				</H2>　 
+				</DIV>
+				</FORM>
+			</DIV>
+		</DIV>
+		<DIV id=numberDiv style="DISPLAY: none;">
+			<DIV class=Cont_tit>
+			<H1 style="FLOAT: left">车次查询</H1>
+			<DIV class=clear></DIV>
+			<DIV class=c_js_div>
+			<DIV class=fl>查询车次：<SPAN class=Cc00 id=numCheci></SPAN> 　|　总里程：<SPAN class=C333 
+			id=numCourse></SPAN> 　|　全程时间：<SPAN class=C333 id=numTime></SPAN> <A 
+			onclick="return fGoQuery();" 
+			href="index.html">[重新查询]</A> </DIV>
+			<DIV class=lc_T_noti>此火车信息仅供参考</DIV></DIV>
+			<DIV class=clear></DIV></DIV><!--主体内容开始-->
+			<DIV id=numberResultDiv></DIV>
+			<DIV class=btn_botm><INPUT class=btn_blue_B onClick="return fGoQuery();" type=button value=重新查询></DIV><BR><BR>
+		</DIV>
+		<DIV id=stationDiv style="DISPLAY: none">
+			<DIV class=Cont_tit>
+			<H1 style="FLOAT: left">车站查询</H1>
+			<DIV class=clear></DIV>
+			<DIV class=c_js_div>
+			<DIV class=fl>查询车站：<SPAN class=Cc00 id=stationName></SPAN> | 经过的火车线路有 <SPAN 
+			class=Cc00 id=stationLine>2</SPAN> 条 <A onClick="return fGoQuery();" 
+			href="index.html">[重新查询]</A> </DIV>
+			<DIV class=lc_T_noti>此火车信息仅供参考</DIV></DIV>
+			<DIV class=clear></DIV></DIV><!--主体内容开始-->
+			<DIV id=stationResultDiv></DIV>
+			<DIV class=btn_botm><INPUT class=btn_blue_B onClick="return fGoQuery();" type=button value=重新查询></DIV><BR><BR>
+		</DIV>
+		<DIV id=s2sDiv style="DISPLAY: none">
+			<DIV class=Cont_tit>
+			<H1 style="FLOAT: left">站站查询</H1>
+			<DIV class=clear></DIV>
+			<DIV class=c_js_div>
+			<DIV class=fl>乘车区间：<SPAN class=Cc00 id=s2sArea></SPAN> | 共查询到线路 <SPAN class=Cc00 
+			id=s2sLine></SPAN>条 <A onClick="return fGoQuery();" 
+			href="index.html">[重新查询]</A> </DIV>
+			<DIV class=lc_T_noti>此火车信息仅供参考</DIV></DIV>
+			<DIV class=clear></DIV></DIV><!--主体内容开始-->
+			<DIV id=s2sResultDiv></DIV>
+			<DIV class=btn_botm><INPUT class=btn_blue_B onClick="return fGoQuery();" type=button value=重新查询></DIV><BR><BR>
+		</DIV>
+		<DIV id=loadDiv style="DISPLAY: none">
+			<DIV class=Cont_tit>
+			<H1>火车查询</H1><SPAN>提供全国火车起点/终点/车次信息查询</SPAN> </DIV>
+			<DIV class="Cont hbinfo"><IMG src="images/hbload.gif"> 正在查询数据，请稍候... 
+			</DIV></DIV>
+			<DIV id=failDiv style="DISPLAY: none">
+			<DIV class=Top><A class=a_INDEX 
+			href="index.html">生活百宝箱</A> <B 
+			class=Top_B_arr></B><SPAN><STRONG>火车查询</STRONG></SPAN> </DIV>
+			<DIV class="Cont hbinfo"><IMG src="images/error.gif"> 查询失败 <A 
+			onclick="return fGoQuery();" 
+			href="index.html">重新查询</A> 
+			</DIV>
+		</DIV>
+		<div class="clear"></div>
+	</div>
+    <div class="line"></div>
+	<div class="copyright">声明：除"12334网址导航"之外，本站所有LOGO都归原站所有，但本站所有其它设计均为原创，严禁拷贝源代码！<br>&copy;2008 <a href="http://www.wugang5.com">12334网址导航</a>　<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.wugang5.com/');return(false);" style="BEHAVIOR: url(#default#homepage)">将12334网址导航设为首页</a></div>
+	<div class="line"></div>
+</body>
+</html>
+
+<span style="display:none;">
+<script src="../images/calendar.js"></script>
+<script src="../images/weather.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+MiniSite.Weather.print("Wealth");
+/*]]>*/
+</script>
+</span>

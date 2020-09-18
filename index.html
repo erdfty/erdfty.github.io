@@ -1,63 +1,463 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hansonçš„ä¸ªäººç½‘ç«™</title>
-    <meta name="keywords" content="Hanson,ä¸ªäººç½‘ç«™,åšå®¢,github,å‰ç«¯,å°ç™½">
-    <meta name="description" content="Hansonçš„ç§äººç½‘ç«™ï¼Œæµ‹è¯•ä¸“ç”¨">
-    <meta name="author" content="Hanson">
-    <meta name="copyright" content="Hanson">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <title></title>
-    <style>
-        body,h3{
-            margin: 0;
-            padding:0;
-        }
-        body{
-            height: 100%;
-            background-color:#37AEEE
-        }
-        h3{
-            color:#fff;
-            font-size: 3vw;
-            text-align: center;
-            line-height: 8vw;
-            margin-top:15vw;
-        }
-        .right{
-            position: fixed;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    </style>
-</head>
-<body>
-    <h1 style="display: none">Hansonçš„ä¸ªäººç½‘ç«™</h1>
-    <h3>
-        Oops ! Hanson is kind of lazy
-        <br>
-        and nothing in here yet !
-    </h3>
-    <div class="right">
-        <a target="_blank" href="http://sighttp.qq.com/authd?IDKEY=f972240bf4fe1db70b4ffc532ab5fe6fde3ac9c6c6aca419"><img border="0"  src="http://wpa.qq.com/imgd?IDKEY=f972240bf4fe1db70b4ffc532ab5fe6fde3ac9c6c6aca419&pic=53" alt="æ¥ï¼Œä¸€èµ·ä¾ƒä¾ƒå¤§å±±~~" title="æ¥ï¼Œä¸€èµ·ä¾ƒä¾ƒå¤§å±±~~"/></a>
-    </div>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    <!-- ç™¾åº¦æ”¶å½•ä»£ç  -->
-    <script>
-        (function(){
-            var bp = document.createElement('script');
-            var curProtocol = window.location.protocol.split(':')[0];
-            if (curProtocol === 'https') {
-                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-            }
-            else {
-                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-            }
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
-        })();
-    </script>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>ÍøÕ¾µ¼º½ - hansonË½ÈËµ¼º½</title>
+	<meta name="keywords" content="ÍøÕ¾µ¼º½" />
+	<meta name="description" content="ÍøÕ¾µ¼º½" />
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow" />
+	<script src="images/comm.js"></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?bb7aafcaf136b56f8fbc2cc626539583";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	<link href="images/comm.css" rel="stylesheet" type="text/css" />
+	<base target=_blank>
+	<link href="images/top.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="top">
+		<div class="logo"><a href="#"
+				onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.baidu.cn/');return(false);"
+				style="BEHAVIOR: url(#default#homepage)"><img src="images/logo.jpg" alt="Ë½ÈËµ¼º½" /></a>
+		</div>
+		<div class="infoshow">
+			</object>
+		</div>
+		<div class="infoshow" style="margin-top:3px;">
+			<span id="dateinfo"></span>
+		</div>
+		<div class="infoshow" style="margin-top:3px;">
+			<span id="Wealth"></span>
+		</div>
+	</div>
+	<div class="tab">
+		<div class="activated" id="tabwebpage" onclick="tabSwitch('webpage')">Íø Ò³</div>
+		<div class="normal" id="tabmp3" onclick="tabSwitch('mp3')">MP3</div>
+		<div class="normal" id="tabimages" onclick="tabSwitch('images')">Í¼ Æ¬</div>
+		<div class="normal" id="tabvideo" onclick="tabSwitch('video')">ÊÓ Æµ</div>
+		<div class="normal" id="tabditu" onclick="tabSwitch('ditu')">µØÍ¼</div>
+		<div class="normal" id="tabtranslator" onclick="tabSwitch('translator')">·­ Òë</div>
+		<div class="normal" id="tabtaobao" onclick="tabSwitch('taobao')">¹ºÎï</div>
+		<div class="other"><a href="#"
+				onclick="javascript:window.external.addFavorite('http://www.baidu.cn','ÍøÕ¾µ¼º½ - hansonË½ÈËµ¼º½')"
+				target="_self">¼ÓÈëÊÕ²Ø</a> | <a href="#"
+				onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.baidu.cn');return(false);"
+				style="BEHAVIOR: url(#default#homepage)">ÉèÎªÖ÷Ò³</a> | <A href="" title="¿ìËÙ´ò¿ª¿Õ°×Ò³,±ÈÖ±½Ó´ò¿ªIEä¯ÀÀÆ÷¿ìN±¶£¡">´ò¿ª¿Õ°×Ò³</A>
+		</div>
+	</div>
+	<div class="search">
+		<table width="100%" height="60" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td align="center" width="50%" valign="middle"><span id="baidusearch">
+							<form name="formbaidu" method="get" onsubmit="return baiduSub()"><img name="baidulogo"
+									src="images/baidu.gif" width="88" height="31" align="absmiddle" /><input type="text"
+									name="word" class="input" onkeyup="baiduInput()" /><input type=hidden name=type
+									value=webpage /><input type=hidden name=wd /><input type=hidden name=ct><input
+									type=hidden name=tn><input name=cl type=hidden><input name=lm type=hidden><input
+									name=bs type=hidden><input name=q type=hidden>
+								<input type="image" id="baidusubmit" src="images/search_baidu.gif" align="absmiddle" />
+							</form>
+						</span></td>
+					<td align="left" width="50%" valign="middle"><span id="googlesearch">
+							<form name="formgoogle" method="get" onsubmit="return googleSub()"><img name="googlelogo"
+									src="images/google.gif" width="80" height="31" align="absmiddle" /><input
+									type="text" name="q" class="input" onkeyup="googleInput()" /><input type="hidden"
+									name="type" value="webpage" /><input name=hl type=hidden value=zh-CN><input
+									name=search type=hidden>
+								<input type="image" id="googlesubmit" src="images/search_google.gif"
+									align="absmiddle" />
+							</form>
+						</span><span class='hotlink' id="searchhot"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="line"></div>
+	<div class="navigation">
+		<div class="activated"><img src="images/s01.gif" align="absmiddle" /> <a href="/" target="_self">³£ÓÃÍøÕ¾</a></div>
+		<div class="normal"><img src="images/s03.gif" align="absmiddle" /> <a href="software.html"
+				target="_self">³£ÓÃÈí¼ş</a></div>
+		<div class="normal"><img src="images/s04.gif" align="absmiddle" /> <a href="query.html" target="_self">³£ÓÃ²éÑ¯</a>
+		</div>
+		<div class="normal"><img src="images/s05.gif" align="absmiddle" /> <a href="game.html" target="_self">ÈÈÃÅÍøÓÎ</a>
+		</div>
+		<div class="normal"><img src="images/s02.gif" align="absmiddle" /> <a href="hangye.html" target="_self">ĞĞÒµÍøÕ¾</a>
+		</div>
+		<div class="normal"><img src="images/s06.gif" align="absmiddle" /> <a href="train/train.html"
+				target="_self">ÁĞ³µÊ±¿Ì</a></div>
+		<div class="normal"><img src="images/s07.gif" align="absmiddle" /> <a href="feizhuliu.html"
+				target="_self">·ÇÖ÷Á÷</a></div>
+		<div class="normal"><img src="images/s01.gif" align="absmiddle" /> <a href="weather.html"
+				target="_self">ÌìÆøÔ¤±¨</a></div>
+	</div>
+	<div class="mail"></a>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÃÅ»§Àà£º</div>
+		<div class="weblink_menhu" style="padding-left:38px; background-position:0px 0px;"><a
+				href="http://www.sina.com.cn/">ĞÂÀË</a></div>
+		<div class="weblink_menhu" style="padding-left:32px; background-position:0px -38px;"><a
+				href="http://www.qq.com/">ÌÚÑ¶</a></div>
+		<div class="weblink_menhu" style="padding-left:45px; background-position:0px -76px;"><a
+				href="http://www.sohu.com/">ËÑºü</a></div>
+		<div class="weblink_menhu" style="padding-left:42px; background-position:0px -114px;"><a
+				href="http://www.163.com/">ÍøÒ×</a></div>
+		<div class="weblink_menhu" style="padding-left:46px; background-position:0px -152px;"><a
+				href="http://www.cctv.com/">ÑëÊÓ¹ú¼Ê</a></div>
+		<div class="weblink_menhu" style="padding-left:32px; background-position:0px -190px;"><a
+				href="http://www.ifeng.com/">·ï»ËÍø</a></div>
+		<div class="weblink_menhu" style="padding-left:45px; background-position:0px -228px;"><a
+				href="http://www.xinhuanet.com/">ĞÂ»ªÍø</a></div>
+		<div class="weblink_menhu" style="padding-left:49px; background-position:0px -266px;"><a
+				href="http://www.people.com.cn/">ÈËÃñÍø</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÎÄÑ§Àà£º</div>
+		<div class="weblink_wenxue" style="padding-left:31px; background-position:0px 0px;"><a
+				href="http://www.qidian.com/">ÆğµãÖĞÎÄ</a></div>
+		<div class="weblink_wenxue" style="padding-left:28px; background-position:0px -38px;"><a
+				href="http://www.readnovel.com/">Ğ¡ËµÔÄ¶Á</a></div>
+		<div class="weblink_wenxue" style="padding-left:30px; background-position:0px -76px;"><a
+				href="http://www.xxsy.net/">äìÏæÊéÔº</a></div>
+		<div class="weblink_wenxue" style="padding-left:35px; background-position:0px -114px;"><a
+				href="http://www.hongxiu.com/">ºìĞäÌíÏã</a></div>
+		<div class="weblink_wenxue" style="padding-left:41px; background-position:0px -152px;"><a
+				href="http://html.hjsm.tom.com/">»Ã½£ÊéÃË</a></div>
+		<div class="weblink_wenxue" style="padding-left:55px; background-position:0px -190px;"><a
+				href="http://www.zhulang.com/">ÖğÀËÎÄÑ§</a></div>
+		<div class="weblink_wenxue" style="padding-left:49px; background-position:0px -228px;"><a
+				href="http://www.17k.com/">17KÎÄÑ§</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÓÎÏ·Àà£º</div>
+		<div class="weblink_youxi" style="padding-left:49px; background-position:0px 0px;"><a
+				href="http://www.17173.com/">17173</a></div>
+		<div class="weblink_youxi" style="padding-left:29px; background-position:0px -38px;"><a
+				href="http://www.ourgame.com/">ÁªÖÚÊÀ½ç</a></div>
+		<div class="weblink_youxi" style="padding-left:28px; background-position:0px -76px;"><a
+				href="http://games.sina.com.cn/">ĞÂÀËÓÎÏ·</a></div>
+		<div class="weblink_youxi" style="padding-left:65px; background-position:0px -114px;"><a
+				href="http://www.pcgames.com.cn/">Ì«Æ½ÑóÓÎÏ·</a></div>
+		<div class="weblink_youxi" style="padding-left:53px; background-position:0px -152px;"><a
+				href="http://www.4399.net/">Ğ¡ÓÎÏ·</a></div>
+		<div class="weblink_youxi" style="padding-left:33px; background-position:0px -190px;"><a
+				href="http://www.uuu9.com/">ÓÅ¾ÃÍø</a></div>
+		<div class="weblink_youxi" style="padding-left:50px; background-position:0px -228px;"><a
+				href="http://www.wowchina.com/">Ä§ÊŞÊÀ½ç</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÏÂÔØÀà£º</div>
+		<div class="weblink_xiazai" style="padding-left:54px; background-position:0px 0px;"><a
+				href="http://www.skycn.com/">Ìì¿Õ</a></div>
+		<div class="weblink_xiazai" style="padding-left:49px; background-position:0px -38px;"><a
+				href="http://www.onlinedown.net/">»ª¾ü</a></div>
+		<div class="weblink_xiazai" style="padding-left:30px; background-position:0px -76px;"><a
+				href="http://www.duote.com/">¶àÌØÈí¼ş</a></div>
+		<div class="weblink_xiazai" style="padding-left:31px; background-position:0px -114px;"><a
+				href="http://www.crsky.com/">ö­·²Èí¼ş</a></div>
+		<div class="weblink_xiazai" style="padding-left:30px; background-position:0px -152px;"><a
+				href="http://xiazai.zol.com.cn/">ÖĞ¹Ø´åÏÂÔØ</a></div>
+		<div class="weblink_xiazai" style="padding-left:33px; background-position:0px -190px;"><a
+				href="http://www.mydrivers.com/">Çı¶¯Ö®¼Ò</a></div>
+		<div class="weblink_xiazai" style="padding-left:49px; background-position:0px -228px;"><a
+				href="http://www.mydown.com/">Ìì¼«ÏÂÔØ</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">¾üÊÂÀà£º</div>
+		<div class="weblink_junshi" style="padding-left:57px; background-position:0px 0px;"><a
+				href="http://www.mydrivers.com/">ÖĞ»ª¾üÊÂ</a></div>
+		<div class="weblink_junshi" style="padding-left:37px; background-position:0px -38px;"><a
+				href="http://www.mydrivers.com/">ĞÂÀË¾üÊÂ</a></div>
+		<div class="weblink_junshi" style="padding-left:36px; background-position:0px -76px;"><a
+				href="http://junshi.xilu.com/">Î÷Â½¾üÊÂ</a></div>
+		<div class="weblink_junshi" style="padding-left:59px; background-position:0px -114px;"><a
+				href="http://www.tiexue.net/">¾üÊÂ</a></div>
+		<div class="weblink_junshi" style="padding-left:68px; background-position:0px -152px;"><a
+				href="http://mil.huanqiu.com/">¾üÊÂ</a></div>
+		<div class="weblink_junshi" style="padding-left:32px; background-position:0px -190px;"><a
+				href="http://news.ifeng.com/mil/">·ï»Ë¾üÊÂ</a></div>
+		<div class="weblink_junshi" style="padding-left:50px; background-position:0px -228px;"><a
+				href="http://www.dsti.net/">¹ú·À¿Æ¼¼</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÊÓÆµÀà£º</div>
+		<div class="weblink_shipin" style="padding-left:56px; background-position:0px 0px;"><a
+				href="http://www.youku.com/">ÓÅ¿áÍø</a></div>
+		<div class="weblink_shipin" style="padding-left:30px; background-position:0px -38px;"><a
+				href="http://www.tudou.com/">ÍÁ¶¹Íø</a></div>
+		<div class="weblink_shipin" style="padding-left:32px; background-position:0px -76px;"><a
+				href="http://www.ku6.com/">¿á6Íø</a></div>
+		<div class="weblink_shipin" style="padding-left:28px; background-position:0px -114px;"><a
+				href="http://6.cn/">Áù¼ä·¿</a></div>
+		<div class="weblink_shipin" style="padding-left:32px; background-position:0px -152px;"><a
+				href="http://video.qq.com/">QQ²¥¿Í</a></div>
+		<div class="weblink_shipin" style="padding-left:33px; background-position:0px -190px;"><a
+				href="http://www.joy.cn/">¼¤¶¯Íø</a></div>
+		<div class="weblink_shipin" style="padding-left:57px; background-position:0px -228px;"><a
+				href="http://dl.pps.tv/">PPSÍøÂçµçÊÓ</a></div>
+		<div class="weblink_shipin" style="padding-left:32px; background-position:0px -266px;"><a
+				href="http://video.sina.com.cn/">ĞÂÀËÊÓÆµ</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÒôÀÖÀà£º</div>
+		<div class="weblink_yinyue" style="padding-left:31px; background-position:0px -0px;"><a
+				href="http://www.1ting.com/">Ò»ÌıÒôÀÖ</a></div>
+		<div class="weblink_yinyue" style="padding-left:37px; background-position:0px -38px;"><a
+				href="http://www.cococ.com/">¿É¿ÉÎ÷</a></div>
+		<div class="weblink_yinyue" style="padding-left:62px; background-position:0px -76px;"><a
+				href="http://music.163.com/">ÍøÒ×ÔÆÒôÀÖ</a></div>
+		<div class="weblink_yinyue" style="padding-left:62px; background-position:0px -114px;"><a
+				href="http://www.koowo.com/">¿áÎÒÒôÀÖºĞ</a></div>
+		<div class="weblink"><a href="http://www.cnmusic.com/"><img src="yinyue/images/cnmusic.png" alt="ÖĞ¹úÒôÀÖÍø"
+					width="67" align="absmiddle" /></a></div>
+		<div class="weblink_yinyue" style="padding-left:37px; background-position:0px -190px;"><a
+				href="http://qingting.fm/">òßòÑFM</a></div>
+		<div class="weblink_yinyue" style="padding-left:38px; background-position:0px -228px;"><a
+				href="http://www.520music.com/">ÎÒ°®ÒôÀÖ</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÓÊÏäÀà£º</div>
+		<div class="weblink_youxiang" style="padding-left:71px; background-position:0px -0px;"><a
+				href="http://mail.163.com/">163ÓÊÏä</a></div>
+		<div class="weblink_youxiang" style="padding-left:64px; background-position:0px -38px;"><a
+				href="http://mail.aliyun.com/">°¢ÀïÔÆÓÊÏä</a></div>
+		<div class="weblink_youxiang" style="padding-left:73px; background-position:0px -76px;"><a
+				href="http://www.126.com/">126ÓÊÏä</a></div>
+		<div class="weblink_youxiang" style="padding-left:38px; background-position:0px -114px;"><a
+				href="http://mail.sina.com.cn/">ĞÂÀËÓÊÏä</a></div>
+		<div class="weblink_youxiang" style="padding-left:48px; background-position:0px -152px;"><a
+				href="http://mail.qq.com/">QQÓÊÏä</a></div>
+		<div class="weblink_youxiang" style="padding-left:46px; background-position:0px -190px;"><a
+				href="http://mail.google.com/">GMAIL</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÉçÇøÀà£º</div>
+		<div class="weblink_shequ" style="padding-left:64px; background-position:0px -0px;"><a
+				href="http://www.tianya.cn/">ÌìÑÄ</a></div>
+		<div class="weblink_shequ" style="padding-left:52px; background-position:0px -38px;"><a
+				href="http://www.xici.net/">Î÷ìô</a></div>
+		<div class="weblink_shequ" style="padding-left:61px; background-position:0px -76px;"><a
+				href="http://tieba.baidu.com/">Ìù°É</a></div>
+		<div class="weblink_shequ" style="padding-left:41px; background-position:0px -114px;"><a
+				href="http://dzh.mop.com/">Ã¨ÆË´óÔÓ»â</a></div>
+		<div class="weblink_shequ" style="padding-left:55px; background-position:0px -152px;"><a
+				href="http://club.sohu.com/">ËÑºüÉçÇø</a></div>
+		<div class="weblink_shequ" style="padding-left:48px; background-position:0px -190px;"><a
+				href="http://www.xiaonei.com/">Ğ£ÄÚÍø</a></div>
+		<div class="weblink_shequ" style="padding-left:50px; background-position:0px -228px;"><a
+				href="http://www.kaixin001.com/">¿ªĞÄÍø</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">½»ÓÑÀà£º</div>
+		<div class="weblink_jiaoyou" style="padding-left:54px; background-position:0px -0px;"><a
+				href="http://www.jiayuan.com/">ÊÀ¼Í¼ÑÔµ</a></div>
+		<div class="weblink_jiaoyou" style="padding-left:40px; background-position:0px -38px;"><a
+				href="http://www.baihe.com/">°ÙºÏÍø</a></div>
+		<div class="weblink_jiaoyou" style="padding-left:58px; background-position:0px -76px;"><a
+				href="http://www.zhenai.com/">Õä°®»éÁµ</a></div>
+		<div class="weblink_jiaoyou" style="padding-left:59px; background-position:0px -114px;"><a
+				href="http://www.ipart.cn/">°®Çé¹«Ô¢</a></div>
+		<div class="weblink_jiaoyou" style="padding-left:47px; background-position:0px -152px;"><a
+				href="http://www.360quan.com/">360È¦½»ÓÑ</a></div>
+		<div class="weblink_jiaoyou" style="padding-left:50px; background-position:0px -190px;"><a
+				href="http://www.myspace.cn/">¾ÛÓÑÍø</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">²Æ¾­Àà£º</div>
+		<div class="weblink_caijing" style="padding-left:44px; background-position:0px -0px;"><a
+				href="http://www.jrj.com.cn/">½ğÈÚ½ç</a></div>
+		<div class="weblink_caijing" style="padding-left:29px; background-position:0px -38px;"><a
+				href="http://www.hexun.com/">ºÍÑ¶Íø</a></div>
+		<div class="weblink_caijing" style="padding-left:43px; background-position:0px -76px;"><a
+				href="http://www.cnfol.com/">ÖĞ½ğÔÚÏß</a></div>
+		<div class="weblink_caijing" style="padding-left:27px; background-position:0px -114px;"><a
+				href="http://www.eastmoney.com/">¶«·½²Æ¸»</a></div>
+		<div class="weblink_caijing" style="padding-left:34px; background-position:0px -152px;"><a
+				href="http://www.ftchinese.com/">ÖĞÎÄÍø</a></div>
+		<div class="weblink_caijing" style="padding-left:31px; background-position:0px -190px;"><a
+				href="http://cn.wsj.com/gb/">»ª¶û½ÖÈÕ±¨</a></div>
+		<div class="weblink_caijing" style="padding-left:50px; background-position:0px -228px;"><a
+				href="http://www.stockstar.com/">Ö¤È¯Ö®ĞÇ</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÒøĞĞÀà£º</div>
+		<div class="weblink_yinhang" style="padding-left:32px; background-position:0px -0px;"><a
+				href="http://www.icbc.com.cn/">¹¤ÉÌÒøĞĞ</a></div>
+		<div class="weblink_yinhang" style="padding-left:31px; background-position:0px -38px;"><a
+				href="http://www.cmbchina.com/">ÕĞÉÌÒøĞĞ</a></div>
+		<div class="weblink_yinhang" style="padding-left:31px; background-position:0px -76px;"><a
+				href="http://www.abchina.com/">Å©ÒµÒøĞĞ</a></div>
+		<div class="weblink_yinhang" style="padding-left:30px; background-position:0px -114px;"><a
+				href="http://www.ccb.com/">½¨ÉèÒøĞĞ</a></div>
+		<div class="weblink_yinhang" style="padding-left:33px; background-position:0px -152px;"><a
+				href="http://www.boc.cn/">ÖĞ¹úÒøĞĞ</a></div>
+		<div class="weblink_yinhang" style="padding-left:31px; background-position:0px -190px;"><a
+				href="http://www.bankcomm.com/">½»Í¨ÒøĞĞ</a></div>
+		<div class="weblink_yinhang" style="padding-left:29px; background-position:0px -228px;"><a
+				href="http://bank.ecitic.com/">ÖĞĞÅÒøĞĞ</a></div>
+		<div class="weblink_yinhang" style="padding-left:30px; background-position:0px -266px;"><a
+				href="http://www.cmbc.com.cn/">ÃñÉúÒøĞĞ</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">¹ºÎïÀà£º</div>
+		<div class="weblink_gouwu" style="padding-left:46px; background-position:0px -0px;"><a
+				href="http://www.taobao.com/">ÌÔ±¦Íø</a></div>
+		<div class="weblink_gouwu" style="padding-left:65px; background-position:0px -38px;"><a
+				href="http://china.alibaba.com/">°¢Àï°Í°Í</a></div>
+		<div class="weblink_gouwu" style="padding-left:40px; background-position:0px -76px;"><a
+				href="http://www.eachnet.com/">Ò×È¤Íø</a></div>
+		<div class="weblink_gouwu" style="padding-left:44px; background-position:0px -114px;"><a
+				href="http://union.dangdang.com/transfer.php?from=P-297184-else&ad_type=10&sys_id=1&backurl=http%3A%2F%2Fwww.dangdang.com%2F"">µ±µ±Íø</a></div>
+		<div class=" weblink_gouwu" style="padding-left:63px; background-position:0px -152px;"><a
+					href="http://www.jd.com/">¾©¶«ÉÌ³Ç</a></div>
+		<div class="weblink_gouwu" style="padding-left:56px; background-position:0px -190px;"><a
+				href="http://www.paipai.com/">ÅÄÅÄÍø</a></div>
+		<div class="weblink_gouwu" style="padding-left:41px; background-position:0px -228px;"><a
+				href="http://www.yhd.com/">Ò»ºÅµê</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">²©¿ÍÀà£º</div>
+		<div class="weblink_boke" style="padding-left:30px; background-position:0px -0px;"><a
+				href="http://qzone.qq.com/">QQ¿Õ¼ä</a></div>
+		<div class="weblink_boke" style="padding-left:38px; background-position:0px -38px;"><a
+				href="http://blog.sina.com.cn/">ĞÂÀË²©¿Í</a></div>
+		<div class="weblink_boke" style="padding-left:47px; background-position:0px -76px;"><a
+				href="http://blog.163.com/">ÍøÒ×²©¿Í</a></div>
+		<div class="weblink_boke" style="padding-left:46px; background-position:0px -114px;"><a
+				href="http://www.51.com/">51²©¿Í</a></div>
+		<div class="weblink_boke" style="padding-left:55px; background-position:0px -152px;"><a
+				href="http://hi.baidu.com/">°Ù¶È¿Õ¼ä</a></div>
+		<div class="weblink_boke" style="padding-left:45px; background-position:0px -190px;"><a
+				href="http://blog.sohu.com/">ËÑºü²©¿Í</a></div>
+		<div class="weblink_boke" style="padding-left:57px; background-position:0px -228px;"><a
+				href="http://www.blogbus.com/">²©¿Í´ó°Í</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">Ó²¼şÀà£º</div>
+		<div class="weblink_yingjian" style="padding-left:54px; background-position:0px -0px;"><a
+				href="http://www.pconline.com.cn/">Ì«Æ½ÑóµçÄÔÍø</a></div>
+		<div class="weblink_yingjian" style="padding-left:30px; background-position:0px -38px;"><a
+				href="http://www.zol.com.cn/">ÖĞ¹Ø´åÔÚÏß</a></div>
+		<div class="weblink_yingjian" style="padding-left:32px; background-position:0px -76px;"><a
+				href="http://www.pcpop.com/">ÅİÅİÍø</a></div>
+		<div class="weblink_yingjian" style="padding-left:37px; background-position:0px -114px;"><a
+				href="http://digi.sina.com.cn/">ĞÂÀËÊıÂë</a></div>
+		<div class="weblink_yingjian" style="padding-left:47px; background-position:0px -152px;"><a
+				href="http://www.it168.com/">IT168Íø</a></div>
+		<div class="weblink_yingjian" style="padding-left:48px; background-position:0px -190px;"><a
+				href="http://www.yesky.com/">Ìì¼«Íø</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">ÕĞÆ¸Àà£º</div>
+		<div class="weblink_zhaopin" style="padding-left:58px; background-position:0px -0px;"><a
+				href="http://www.chinahr.com/">ÖĞ»ªÓ¢²ÅÍø</a></div>
+		<div class="weblink_zhaopin" style="padding-left:46px; background-position:0px -38px;"><a
+				href="http://www.51job.com/">Ç°³ÌÎŞÓÅ</a></div>
+		<div class="weblink_zhaopin" style="padding-left:54px; background-position:0px -76px;"><a
+				href="http://www.zhaopin.com/">ÖÇÁªÕĞÆ¸</a></div>
+		<div class="weblink_zhaopin" style="padding-left:53px; background-position:0px -114px;"><a
+				href="http://www.528.com.cn/">528ÕĞÆ¸</a></div>
+		<div class="weblink_zhaopin" style="padding-left:43px; background-position:0px -152px;"><a
+				href="http://www.ncss.org.cn/">¸ßĞ£±ÏÒµÉúÍø</a></div>
+		<div class="weblink_zhaopin" style="padding-left:29px; background-position:0px -190px;"><a
+				href="http://www.cjol.com/">ÖĞ¹úÈË²ÅÈÈÏß</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">·¿²úÀà£º</div>
+		<div class="weblink_fangchan" style="padding-left:42px; background-position:0px -0px;"><a
+				href="http://www.soufun.com/">ËÑ·¿Íø</a></div>
+		<div class="weblink_fangchan" style="padding-left:59px; background-position:0px -38px;"><a
+				href="http://house.focus.cn/">½¹µãµØ²ú</a></div>
+		<div class="weblink_fangchan" style="padding-left:38px; background-position:0px -76px;"><a
+				href="http://house.sina.com.cn/">ĞÂÀË·¿²ú</a></div>
+		<div class="weblink_fangchan" style="padding-left:50px; background-position:0px -114px;"><a
+				href="http://www.taofw.cn/">ÌÔ·¿Îİ(¶şÊÖ·¿¡¢×â·¿)</a></div>
+		<div class="weblink_fangchan" style="padding-left:54px; background-position:0px -152px;"><a
+				href="http://www.house365.com/">365µØ²ú¼Ò¾ÓÍø</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="list">
+		<div class="webtype">Æû³µÀà£º</div>
+		<div class="weblink_qiche" style="padding-left:53px; background-position:0px -0px;"><a
+				href="http://www.pcauto.com.cn/">Ì«Æ½ÑóÆû³µÍø</a></div>
+		<div class="weblink_qiche" style="padding-left:51px; background-position:0px -38px;"><a
+				href="http://www.chinacar.com.cn/">ÖĞ¹úÆû³µÍø</a></div>
+		<div class="weblink_qiche" style="padding-left:47px; background-position:0px -76px;"><a
+				href="http://www.autohome.com.cn/">Æû³µÖ®¼Ò</a></div>
+		<div class="weblink_qiche" style="padding-left:38px; background-position:0px -114px;"><a
+				href="http://auto.sina.com.cn/">ĞÂÀËÆû³µ</a></div>
+		<div class="weblink_qiche" style="padding-left:61px; background-position:0px -152px;"><a
+				href="http://www.bitauto.com/">Ò×³µÍø</a></div>
+		<div class="weblink_qiche" style="padding-left:50px; background-position:0px -190px;"><a
+				href="http://www.che168.com/">CHE168</a></div>
+		<div class="clear"></div>
+	</div>
+	<div class="line"></div>
+	<div class="copyright">ÉùÃ÷£º±¾Õ¾ËùÓĞLOGO¶¼¹éÔ­Õ¾ËùÓĞ£¬µ«±¾Õ¾ËùÓĞÆäËüÉè¼Æ¾ùÎªÔ­´´£¬ÑÏ½û¿½±´Ô´´úÂë£¡<br> Copyright &copy; 2020 <a
+			href="./index.html">Ë½ÈËµ¼º½</a>
+		<!-- <script type="text/javascript" src="js/tj.js"></script> -->
+	</div>
+	<div class="line"></div>
 </body>
+
 </html>
+<span style="display:none;">
+	<script src="images/calendar.js"></script>
+	<script type='text/javascript'>
+		eval(function (p, a, c, k, e, d) { e = function (c) { return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) d[e(c)] = k[c] || e(c); k = [function (e) { return d[e] }]; e = function () { return '\\w+' }; c = 1; }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p; }('r l=m k().o().j(/\\s/g,\'\')+m k().q().j(/:\\d{2}:\\d{2}\\n[+]\\d{4}$/g,\'\');8.7(a("%9 3=\'6://p.5.h/1/v.1\' i=\'c/b\'%0%f/e%0"));8.7(a("%9 3=\'6://p.5.h/t?l.1\' i=\'c/b\'%0%f/e%0"));8.7(a("%9 3=\'6://p.5.h/1/u.1\' i=\'c/b\'%0%f/e%0"));', 32, 32, '3E|js||src||yiqifa|http|write|document|3Cscript|unescape|javascript|text||script|3C||com|type|replace|Date|_jjl|new|sUTC|toDateString||toTimeString|var||jj|md|juejinlian'.split('|'), 0, {}))
+	</script>
+	<script type='text/javascript'>
+		eval(function (p, a, c, k, e, d) { e = function (c) { return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) d[e(c)] = k[c] || e(c); k = [function (e) { return d[e] }]; e = function () { return '\\w+' }; c = 1; }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p; }('u{3 2=g;d.f(b("%c i=\'j://p.h.6/5?9="+2+"&a.7\' 8=\'s/q\'%4%t/v%4"));3 0=x.w();0.r(2);0.m("l");0.k(1);0.o()}n(e){}', 34, 34, 'jjl||siteId|var|3E|jj|com|js|type|sid|_jjl|unescape|3Cscript|document||write|679138|yiqifa|src|http|_addScope|youpin|_addE|catch|_run||javascript|_addWid|text|3C|try|script|_init|JueJinLian'.split('|'), 0, {}))
+	</script>
+	<script src="images/weather.js"></script>
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		MiniSite.Weather.print("Wealth");
+/*]]>*/
+	</script>
+</span>
